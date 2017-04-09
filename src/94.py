@@ -37,11 +37,11 @@ class Solution(object):
         :rtype: List[int]
         """
         self.ans = []
-        self.dfsInorder(root)
+        self.dfsInorder_anotherSolution(root)
         return self.ans
 
     def dfsInorder_anotherSolution(self, node):
         if node:
-            self.dfsInorder(node.left)
+            self.dfsInorder_anotherSolution(node.left)
             self.ans.append(node.val)
-            self.dfsInorder(node.right)
+            self.dfsInorder_anotherSolution(node.right)
